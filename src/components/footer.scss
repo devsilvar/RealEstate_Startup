@@ -1,0 +1,77 @@
+@import "../responsive.scss";
+
+footer {
+    background-color: black;
+
+
+    .inner-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 80%;
+        margin: 40px auto;
+        gap: 20px;
+
+        @include sm {
+
+            justify-content: center;
+            width: 90%;
+            margin: 40px auto;
+        }
+
+
+        .link {
+            color: orange;
+
+            h4 {
+                border-left: 10px solid white;
+                padding-left: 5%;
+                margin-bottom: 10px;
+                background-color: orange;
+                color: black;
+                display: block;
+                padding: 10px 20px;
+
+                &:hover {
+                    background-color: white;
+                    color: black;
+                    background: linear-gradient(to left, white 34%, orange 65%) right;
+                    background-size: 300% 100%;
+                    transition: all 0.5s ease-in;
+                    cursor: pointer;
+                }
+
+            }
+
+            ul li {
+                list-style-type: '<<';
+                font-variant: small-caps;
+                margin-left: 20px;
+                padding-left: 10px;
+                cursor: pointer;
+                margin-bottom: 10px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+        }
+
+    }
+
+    section {
+
+        .icons {}
+
+        .copywright {
+            width: 60%;
+            margin: auto;
+            color: orange;
+            text-align: center;
+            line-height: 2;
+            word-spacing: 5px;
+        }
+    }
+
+}

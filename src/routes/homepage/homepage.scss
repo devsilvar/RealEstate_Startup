@@ -1,0 +1,474 @@
+@import "../../responsive.scss";
+
+.main-homePage {
+
+    .homepage {
+        display: flex;
+        padding-left: 40px;
+        padding-right: 40px;
+
+        .left-section {
+            flex: 3;
+            padding-right: 20px;
+            display: flex;
+            align-items: center;
+
+
+            @include lg {
+                flex: 2;
+                align-items: flex-start;
+
+            }
+
+            @include sm {
+                padding-right: 0px;
+            }
+
+            .left-wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding-right: 100px;
+
+                @include lg {
+                    padding-right: 0px;
+                }
+
+                @include md {
+                    padding-right: 0px;
+                }
+
+                h1 {
+                    font-size: 2.7rem;
+                    font-weight: bolder;
+
+                    @include sm {
+                        font-size: 2.0rem;
+                    }
+                }
+
+                p {
+                    font-size: 1.2rem;
+                    font-weight: light;
+                }
+
+                .homepage-search {
+
+
+
+                    .homepage-button {
+
+                        button {
+
+                            padding: 14px 32px;
+                            background-color: white;
+                            border: 1px solid silver;
+
+                            &.active {
+                                background-color: black;
+                                color: white;
+                            }
+
+                            &:first-child {
+                                border-top-left-radius: 7px;
+                                border-right: none;
+                            }
+
+                            &:last-child {
+                                border-top-right-radius: 7px;
+
+                            }
+                        }
+                    }
+
+                    .homepage-inputs {
+                        display: flex;
+
+                        @include sm {
+                            flex-direction: column;
+                            width: 100%;
+                        }
+
+
+                        input {
+                            flex: 3;
+                            padding: 20px;
+                            height: 60px;
+                            border: 1px solid silver;
+                            border-right-color: transparent;
+                            border-left-color: transparent;
+
+                            &:first-child {
+                                border-left: 1px solid silver;
+                            }
+
+                            @include md {
+                                flex: 2;
+                                padding: 10px;
+                            }
+
+                            @include sm {
+                                padding: 15px;
+                                height: 10px;
+                                border: 1px solid silver;
+                            }
+                        }
+
+                        button {
+                            flex: 1;
+                            background-color: orange;
+                            border: none;
+                            padding: 0px 15px;
+                            opacity: 0.7;
+                            border: 1px solid silver;
+
+                            img {
+                                width: 26px;
+                                height: 26px;
+                            }
+
+                            @include sm {
+                                padding: 10px 0;
+                            }
+
+                        }
+                    }
+
+
+
+                }
+
+                .homepage-info {
+                    display: flex;
+                    justify-content: space-between;
+
+                    @include sm {
+                        flex-direction: column;
+                        text-align: center;
+                        gap: 5vh;
+                    }
+
+                    div {
+                        h2 {
+                            font-size: 2.5rem;
+                            font-weight: bolder;
+
+                            @include sm {
+                                font-size: 1.8rem;
+                            }
+                        }
+
+                        p {
+                            font-size: 1rem;
+                            font-weight: light;
+
+                            @include sm {
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .right-section {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fcf5f3;
+            height: 100vh;
+
+            @include lg {
+                flex: 2;
+            }
+
+            @include md {
+                display: none;
+            }
+
+            .img-wrapper {
+                display: flex;
+                width: 100%;
+                position: relative;
+
+                .sunicon {
+                    width: 60px;
+                    position: absolute;
+                    right: 40%;
+                    top: 55px;
+                    animation: rotation 2s infinite linear;
+                }
+
+                .rotate {
+                    animation: rotation 2s infinite linear;
+                }
+
+                @keyframes rotation {
+                    from {
+                        transform: rotate(0deg);
+                    }
+
+                    to {
+                        transform: rotate(359deg);
+                    }
+                }
+
+                img {
+                    width: 115%;
+                    position: absolute;
+                    right: 0px;
+
+
+
+                    @include lg {
+                        width: 105%;
+                    }
+                }
+
+
+            }
+
+        }
+    }
+
+    .homepage-offer,
+    .testimony {
+        padding-top: 100px;
+
+
+        h2 {
+            font-size: 2.4rem;
+            text-align: center;
+
+            @include sm {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    .homepage-offer {
+        width: 90%;
+        margin: auto;
+
+        .icons {
+            display: flex;
+            justify-content: space-between;
+            margin: 90px auto;
+            gap: 50px;
+
+            @include sm {
+                flex-direction: column;
+            }
+
+            .icon {
+                text-align: center;
+                padding: 20px;
+                border-radius: 12px;
+
+                &:hover {
+                    cursor: pointer;
+                    box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
+                            100%, 0.075), 0 0 0 1px hsla(0, 0%, 0%, 0.05), 0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+                        0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+                        0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+                    padding: 20px;
+                }
+
+                h4 {
+                    font-size: 1.8rem;
+                    margin-top: 20px;
+
+                    @include sm {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                p {
+
+                    margin-top: 20px;
+                    font-size: 1.1rem;
+                }
+
+                .img-wrapper {
+                    width: 180px;
+                    height: 180px;
+                    align-content: center;
+                    text-align: center;
+                    margin: auto;
+                    border-radius: 50%;
+                    border: 10px solid black;
+                    background-color: orange;
+
+                    &:hover {
+                        transition: all 0.6s ease;
+                        transform: scale(1.1);
+                        rotate: 360deg;
+                    }
+                }
+
+
+            }
+        }
+
+    }
+
+    .popular-houses {
+        background-color: #fcf5f3;
+        padding-top: 100px;
+        padding-bottom: 50px;
+
+
+        h2 {
+            font-size: 2.4rem;
+            text-align: center;
+
+
+        }
+
+        .houses-section {
+            margin-top: 50px;
+            display: flex;
+            gap: 30px;
+            padding-left: 50px;
+            padding-right: 50px;
+
+            @include sm {
+                flex-direction: column;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .fetured-cards {
+                border-radius: 12px;
+                flex: 1;
+                background-color: white;
+                box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,
+                        100%, 0.075), 0 0 0 1px hsla(0, 0%, 0%, 0.05), 0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+                    0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+                    0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+
+                .fetured-wrapper {
+
+                    margin: 25px;
+
+
+                    .img-wrapper {
+                        width: 100%;
+                        height: 240px;
+                        border-radius: 12px;
+                        overflow: hidden;
+
+                        img.house-img {
+                            width: 100%;
+                            height: 240px;
+                            object-fit: cover;
+                            border-radius: 12px;
+
+                            &:hover {
+
+                                -webkit-transform: scale(1.2);
+                                transform: scale(1.2);
+                                -webkit-filter: grayscale(0) opacity(1);
+                                filter: grayscale(0) opacity(1);
+                                -webkit-transition: .3s ease-in-out;
+                                transition: .3s ease-in-out;
+                            }
+                        }
+                    }
+
+                    .card-body {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        height: 200px;
+
+                        p.title {
+                            margin-top: 20px;
+                            font-size: 1.2rem;
+                            font-weight: bold;
+
+
+                            @include sm {
+                                font-size: 0.99rem;
+                            }
+
+                            &:hover {
+                                text-decoration: underline;
+                                text-decoration-color: orange;
+                                text-decoration-thickness: 3px;
+                                cursor: pointer;
+                            }
+                        }
+
+                        .f-icon-section {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+
+                            p {
+
+                                span {
+                                    background-color: orange;
+                                    padding: 10px;
+                                    font-weight: bold;
+
+                                    @include sm {
+                                        padding: 6px;
+                                    }
+                                }
+
+                                font-size: 1.5rem;
+
+                                @include sm {
+                                    font-size: 1.0rem;
+                                }
+
+                            }
+
+                            .fetured-icons {
+                                margin-top: 20px;
+
+                                display: flex;
+                                gap: 20px;
+                                align-items: center;
+
+                                .f-icon {
+
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 10px;
+                                    font-weight: bolder;
+
+                                    img {
+                                        width: 20px;
+                                        height: 20px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .address {
+                            font-weight: 600;
+
+                            @include sm {
+                                font-size: medium;
+                                line-height: 1.5;
+                            }
+
+                            span {
+                                background-color: black;
+                                color: orange;
+                                padding: 5px;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}

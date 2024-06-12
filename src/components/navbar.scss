@@ -1,0 +1,165 @@
+@import "../responsive.scss";
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+
+
+
+
+
+    li {
+
+        transition: all 0.4s ease;
+
+        &:hover {
+            scale: 1.1;
+        }
+
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+
+        @include md {
+            font-size: 0.9rem;
+        }
+    }
+
+    .left {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        flex: 3;
+        display: flex;
+        list-style-type: none;
+        gap: 7vw;
+        align-items: center;
+
+        @include md {
+            gap: 3vw;
+
+        }
+
+        span {
+            font-size: 1.4rem;
+            font-weight: 600;
+            display: flex;
+            gap: 5px;
+
+            img {
+                width: 26px;
+                height: 26px;
+            }
+        }
+
+        li {
+            font-size: 1.1rem;
+
+            @include sm {
+                display: none;
+            }
+
+        }
+
+
+    }
+
+    .right-section {
+        flex: 2;
+        display: flex;
+        justify-content: flex-end;
+        background-color: #fcf5f3;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        @include md {
+            background-color: transparent;
+        }
+    }
+
+
+
+
+    .right {
+        display: flex;
+        list-style-type: none;
+        gap: 3vw;
+        align-items: center;
+
+
+        li {
+            font-size: 1.1rem;
+
+
+            @include md {
+                text-wrap: nowrap;
+            }
+
+            @include sm {
+                display: none;
+            }
+
+
+            button {
+                background-color: orange;
+                padding: 12px 24px;
+                font-size: 1.1rem;
+                border-radius: 4px;
+                border-style: none;
+            }
+        }
+
+        .smallNav {
+            display: none;
+
+            @include sm {
+                display: block;
+
+            }
+
+            img {
+                position: fixed;
+                
+                width: 36px;
+                height: 36px;
+                z-index: 90;
+                display: block;
+            }
+
+            .menu {
+                @include sm {
+                    width: 60%;
+                    position: fixed;
+                    top: 0;
+                    right: -60%;
+                    height: 100vh;
+                    background-color: black;
+                    color: white;
+                    z-index: 50;
+                    transition: all 0.4s ease-in-out;
+
+
+                    a {
+                        display: block;
+                        color: white;
+                        margin-top: 30px;
+                        margin-left: 20px;
+                    }
+
+                    &.active {
+                        right: 0;
+                    }
+                }
+            }
+
+
+
+        }
+
+    }
+}
