@@ -2,8 +2,8 @@ import '@splidejs/react-splide/css';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import './testimony.scss';
 import { IoStar } from 'react-icons/io5';
-import stars from '../assets/stars.svg';
-import { customerReview } from '../api/fakeData';
+import stars from '../../assets/stars.svg';
+import { customerReview } from '../../api/fakeData';
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 
 const TestimonySlide = () => {

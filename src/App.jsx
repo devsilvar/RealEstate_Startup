@@ -1,6 +1,5 @@
 import React from 'react';
 import './layout.scss';
-import Navbar from './components/Navbar';
 import Homepage from './routes/homepage/Homepage';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Layout from './routes/layout/Layout';

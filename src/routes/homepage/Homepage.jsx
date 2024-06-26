@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { customerReview, listData } from '../../api/fakeData';
 import sun from '../../assets/sun.svg';
-
 import './homepage.scss';
-import TestimonySlide from '../../components/TestimonySlide';
+import TestimonySlide from '../../components/testimony/TestimonySlide';
+
 const Homepage = () => {
   const [searchState, setsearchState] = useState({
     state: 'buy',

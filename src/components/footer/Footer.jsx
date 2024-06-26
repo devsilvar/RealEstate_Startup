@@ -1,6 +1,7 @@
 import React from 'react';
 import './footer.scss';
-
+import { FooterLinks } from '../../api/utils';
+import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <footer>
@@ -8,32 +9,39 @@ const Footer = () => {
         <div className='inner-wrapper'>
           <div className='link'>
             <h4>Quick Links</h4>
+
             <ul>
-              <li>Home</li>
-              <li>About</li>
-              <li>Faq</li>
-              <li>Get Started</li>
-              <li>Contact</li>
+              {FooterLinks.slice(0, 4).map((link) => {
+                return (
+                  <li>
+                    <Link to={link.url}>{link.name} </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div className='link'>
             <h4>Quick Links</h4>
             <ul>
-              <li>Home</li>
-              <li>About</li>
-              <li>Faq</li>
-              <li>Get Started</li>
-              <li>Contact</li>
+              {FooterLinks.slice(4, 8).map((link) => {
+                return (
+                  <li>
+                    <Link to={link.url}>{link.name} </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div className='link'>
             <h4>Quick Links</h4>
             <ul>
-              <li>Home</li>
-              <li>About</li>
-              <li>Faq</li>
-              <li>Get Started</li>
-              <li>Contact</li>
+              {FooterLinks.slice(8, FooterLinks.length).map((link) => {
+                return (
+                  <li>
+                    <Link to={link.url}>{link.name} </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
@@ -42,8 +50,7 @@ const Footer = () => {
           <div className='copywright'>
             <p>
               <u> National Transaction Corporation</u> is a Registered MSP/ISO
-              of Elavon, Inc. Georgia a wholly owned subsidiary of U.S. Bancorp,
-              Minneapolis, MN
+              of Elavon, Inc.
             </p>
             <p>
               {' '}
@@ -51,7 +58,6 @@ const Footer = () => {
             </p>
           </div>
         </section>
-        Foooter
       </div>
     </footer>
   );

@@ -1,4 +1,4 @@
-@import "../responsive.scss";
+@import "../../responsive.scss";
 
 footer {
     background-color: black;
@@ -44,12 +44,16 @@ footer {
             }
 
             ul li {
-                list-style-type: '<<';
-                font-variant: small-caps;
+                list-style-type: '-';
                 margin-left: 20px;
                 padding-left: 10px;
                 cursor: pointer;
                 margin-bottom: 10px;
+
+                a {
+                    text-decoration: none;
+                    color: orange
+                }
 
                 &:hover {
                     text-decoration: underline;
@@ -65,9 +69,12 @@ footer {
         .icons {}
 
         .copywright {
-            width: 60%;
+            width: 100%;
+            padding: 10px 20%;
+            background-color: orange;
             margin: auto;
-            color: orange;
+            font-weight: bold;
+            color: black;
             text-align: center;
             line-height: 2;
             word-spacing: 5px;

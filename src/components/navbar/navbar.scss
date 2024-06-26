@@ -1,4 +1,4 @@
-@import "../responsive.scss";
+@import "../../responsive.scss";
 
 nav {
     display: flex;
@@ -124,7 +124,7 @@ nav {
 
             img {
                 position: fixed;
-                
+
                 width: 36px;
                 height: 36px;
                 z-index: 90;
