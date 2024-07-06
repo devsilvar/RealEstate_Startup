@@ -330,8 +330,8 @@
             margin-top: 50px;
             display: flex;
             gap: 30px;
-            padding-left: 50px;
-            padding-right: 50px;
+            padding-left: 100px;
+            padding-right: 100px;
 
             @include sm {
                 flex-direction: column;

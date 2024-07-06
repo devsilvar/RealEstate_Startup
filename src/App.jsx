@@ -17,7 +17,7 @@ const App = () => {
           element: <Homepage />,
         },
         { path: '/list', element: <Listpage /> },
-
+        { path: '/contact', element: <Homepage /> },
         { path: '/singlepage', element: <Singlepage /> },
       ],
     },

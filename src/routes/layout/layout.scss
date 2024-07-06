@@ -1,5 +1,9 @@
 @import "../../responsive.scss";
 
+html {
+    scroll-behavior: smooth;
+}
+
 .layout {
     max-width: 1400px;
     margin: auto;
@@ -23,3 +27,7 @@
         background-color: white;
     }
 }
+
+// .content {
+//     height: calc(100vh - 100px);
+// }

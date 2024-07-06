@@ -1,53 +1,56 @@
 import { useState } from 'react';
 import './navbar.scss';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [isNavOpen, setisNavOpen] = useState(false);
   return (
     <nav>
       <ul className='left'>
-        <span>
-          <img src='/logo.png' alt='' />
-          <p>RzHomes</p>
-        </span>
+        <Link to='/'>
+          <span>
+            <img src='/logo.png' alt='' />
+            <p>RzHomes</p>
+          </span>
+        </Link>
         <li>
-          <a href=' '>Home</a>
+          <Link to='/'>Home</Link>
         </li>
         <li>
-          <a href=' '>About</a>
+          <Link to='/About'>About</Link>
         </li>
         <li>
-          <a href=' '>Contact</a>
+          <Link to='/contact'>Contact</Link>
         </li>
         <li>
-          <a href=' '>Message</a>
+          <Link to='/message'>Message</Link>
         </li>
       </ul>
       <div className='right-section'>
         <ul className='right'>
           <li>
-            <a href=' '>Sign in</a>
+            <Link to='/signin'>Sign in</Link>
           </li>
           <li>
             {' '}
             <button>
               {' '}
-              <a href=' '>Sign up</a>
+              <Link to='/signout'>Sign up</Link>
             </button>{' '}
           </li>
 
           <div className='smallNav'>
             <img
               src='./menu.png'
-              alt=''
+              Linklt=''
               onClick={() => setisNavOpen((prev) => !prev)}
             />
             <div className={isNavOpen ? 'menu active' : 'menu'}>
-              <a href=''>Home</a>
-              <a href=''>About</a>
-              <a href=''>Contact</a>
-              <a href=''>Message</a>
-              <a href=''>Sign in</a>
-              <a href=''>Sign Up</a>
+              <Link to=''>Home</Link>
+              <Link to=''>Linkbout</Link>
+              <Link to=''>ContLinkct</Link>
+              <Link to=''>MessLinkge</Link>
+              <Link to=''>Sign in</Link>
+              <Link to=''>Sign Up</Link>
             </div>
           </div>
         </ul>
