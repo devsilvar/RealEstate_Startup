@@ -5,6 +5,7 @@ const Navbar = () => {
   const [isNavOpen, setisNavOpen] = useState(false);
   return (
     <nav>
+      <div className='overlay' onClick={() => setisNavOpen(false)}></div>
       <ul className='left'>
         <Link to='/'>
           <span>
@@ -42,6 +43,11 @@ const Navbar = () => {
             <img
               src='./menu.png'
               Linklt=''
+              style={
+                isNavOpen
+                  ? { position: 'fixed', top: '27px', right: '9.5%' }
+                  : undefined
+              }
               onClick={() => setisNavOpen((prev) => !prev)}
             />
             <div className={isNavOpen ? 'menu active' : 'menu'}>
