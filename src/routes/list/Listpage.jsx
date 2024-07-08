@@ -12,10 +12,11 @@ export const Listpage = () => {
     <main className='listPage'>
       <div className='wrapper'>
         <Filter />
-
-        {data.map((item) => {
-          return <Cards key={item.id} item={item} />;
-        })}
+        <div className='results'>
+          {data.map((item) => {
+            return <Cards key={item.id} item={item} />;
+          })}
+        </div>
       </div>
       <section className='map-section'>
         <Map item={data} />

@@ -2,9 +2,12 @@
 
 footer {
     background-color: black;
+    width: 100%;
+
 
 
     .inner-wrapper {
+        padding: 40px 0px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;

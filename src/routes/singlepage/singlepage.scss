@@ -1,0 +1,90 @@
+.singlePage {
+    display: flex;
+
+
+
+    .details {
+        flex: 3;
+
+
+        .wrapper {
+            padding: 10px 50px;
+
+            .info {
+                margin-top: 50px;
+
+                .top {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .post {
+                        display: flex;
+                        flex-direction: column;
+
+                        gap: 20px;
+
+                        h1 {
+                            font-size: xx-large;
+                        }
+
+                        .address {
+                            display: flex;
+                            gap: 5px;
+                            align-items: center;
+                            font-size: 14px;
+                            color: #888;
+
+                            img {
+                                width: 16px;
+                                height: 16px;
+                            }
+                        }
+
+                        .price {
+                            padding: 5px;
+                            background-color: rgba(254, 201, 81, 0.8);
+                            width: max-content;
+                            border-radius: 5px;
+                            font-weight: 300;
+                            font-size: 20px;
+                        }
+                    }
+
+                    .user {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        align-items: center;
+                        padding: 20px 50px;
+                        background-color: #fcf5f3;
+                        font-weight: 600;
+                        border-radius: 10px;
+
+                        img {
+                            width: 54px;
+                            height: 54px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+
+                .bottom {
+                    margin-top: 50px;
+                    color: #555;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+
+    .feutures {
+
+        flex: 2;
+        background-color: #fcf5f3;
+
+        .wrapper {
+            padding: 0 20px;
+        }
+    }
+}

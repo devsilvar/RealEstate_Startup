@@ -1,5 +1,8 @@
+import { useEffect } from 'react';
 import './filter.scss';
 const Filter = () => {
+  useEffect(() => {}, []);
+
   return (
     <section className='filter'>
       <h1>

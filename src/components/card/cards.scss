@@ -1,5 +1,4 @@
 .card {
-
     display: flex;
     gap: 25px;
     padding: 20px;
@@ -49,6 +48,7 @@
             &:hover {
                 color: #000;
                 scale: 1.03;
+                border-bottom: 2px solid orange;
             }
 
             a {

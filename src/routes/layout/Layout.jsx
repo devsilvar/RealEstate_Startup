@@ -13,7 +13,9 @@ const Layout = () => {
       <div className='content'>
         <Outlet />
       </div>
-      <Footer />
+      <div className='footer'>
+        <Footer />
+      </div>
     </section>
   );
 };

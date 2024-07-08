@@ -9,7 +9,7 @@ const Cards = ({ item }) => {
       </Link>
       <div className='textContainer'>
         <h2 className='title'>
-          <Link to={`/${item.id}`}>{item.title}</Link>
+          <Link to={`/list/${item.id}`}>{item.title}</Link>
         </h2>
         <p className='address'>
           <img src='/pin.png' alt='' />
