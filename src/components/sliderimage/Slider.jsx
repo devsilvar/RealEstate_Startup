@@ -29,7 +29,7 @@ const Slider = ({ images }) => {
               alt=''
               onClick={() =>
                 setimageIndex((prev) =>
-                  prev == images.length ? (prev = 0) : (prev = prev + 1)
+                  prev >= images.length - 1 ? (prev = 0) : (prev += 1)
                 )
               }
             />

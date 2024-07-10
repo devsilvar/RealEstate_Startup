@@ -4,7 +4,8 @@ import { MapContainer, Marker, TileLayer, Popup, useMap } from 'react-leaflet';
 import Pin from '../pin/Pin';
 import 'leaflet/dist/leaflet.css';
 
-const Map = ({ item }) => {
+const Map = ({ items }) => {
+  console.log(items);
   return (
     <MapContainer
       center={[9.082, 8.6753]}
@@ -17,7 +18,7 @@ const Map = ({ item }) => {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
       />
-      {item.map((data, index) => {
+      {items.map((data, index) => {
         return <Pin data={data} key={index} />;
       })}
     </MapContainer>

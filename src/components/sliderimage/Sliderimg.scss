@@ -1,3 +1,5 @@
+@import "../../responsive.scss";
+
 .slidesection {
     display: flex;
     gap: 20px;
@@ -14,6 +16,7 @@
         top: 0;
         left: 0;
         display: flex;
+        z-index: 99;
         justify-content: space-between;
         align-items: center;
 
@@ -24,8 +27,17 @@
 
             display: flex;
 
+            &:hover {
+                transform: scale(1.2);
+                transition: all 0.3s;
+            }
+
             img {
                 width: 30px;
+
+                @include md {
+                    width: 20px
+                }
 
                 &.right {
                     transform: rotate(180deg);
@@ -42,6 +54,17 @@
             font-weight: bold;
             width: 40px;
             cursor: pointer;
+
+            &:hover {
+                transform: scale(1.1);
+                transition: all 0.3s;
+            }
+
+            @include md {
+                width: 30px;
+                top: 10px;
+                right: 10px;
+            }
         }
 
         .imageContainer {

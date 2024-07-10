@@ -9,18 +9,22 @@ export const Listpage = () => {
   const data = listData;
 
   return (
-    <main className='listPage'>
-      <div className='wrapper'>
-        <Filter />
-        <div className='results'>
-          {data.map((item) => {
-            return <Cards key={item.id} item={item} />;
-          })}
+    <main className='mainlistPage'>
+      <section className='listPage'>
+        <div className='wrapper'>
+          <Filter />
+          <div className='results'>
+            {data.map((item) => {
+              return <Cards key={item.id} item={item} />;
+            })}
+          </div>
         </div>
-      </div>
-      <section className='map-section'>
-        <Map item={data} />
+        <section className='map-section'>
+          <Map items={data} />
+        </section>
       </section>
+
+      <div className='needRoomate'></div>
     </main>
   );
 };

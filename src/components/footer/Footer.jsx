@@ -11,7 +11,7 @@ const Footer = () => {
             <h4>Quick Links</h4>
 
             <ul>
-              {FooterLinks.slice(0, 4).map((link) => {
+              {FooterLinks.slice(0, 6).map((link) => {
                 return (
                   <li>
                     <Link to={link.url}>{link.name} </Link>
@@ -23,7 +23,7 @@ const Footer = () => {
           <div className='link'>
             <h4>Quick Links</h4>
             <ul>
-              {FooterLinks.slice(4, 8).map((link) => {
+              {FooterLinks.slice(7, FooterLinks.length).map((link) => {
                 return (
                   <li>
                     <Link to={link.url}>{link.name} </Link>
@@ -33,16 +33,11 @@ const Footer = () => {
             </ul>
           </div>
           <div className='link'>
-            <h4>Quick Links</h4>
-            <ul>
-              {FooterLinks.slice(8, FooterLinks.length).map((link) => {
-                return (
-                  <li>
-                    <Link to={link.url}>{link.name} </Link>
-                  </li>
-                );
-              })}
-            </ul>
+            <h4>Our Location</h4>
+            <p>
+              lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Sit eius cum a.
+            </p>
           </div>
         </div>
         <section>

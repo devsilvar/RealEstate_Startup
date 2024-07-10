@@ -1,33 +1,46 @@
 @import "../../responsive.scss";
 
-.listPage {
-    display: flex;
-    padding: 0px 40px;
+.mainlistPage {
 
-    .wrapper {
-        flex: 3;
+
+    .listPage {
         display: flex;
-        flex-direction: column;
-        gap: 20px;
-        height: 150vh;
-        overflow-y: scroll;
-        padding-right: 40px;
-        padding-bottom: 50px;
+        padding: 0px 40px;
+        align-items: center;
+
+        .wrapper {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            height: 150vh;
+            overflow-y: scroll;
+            padding-right: 40px;
+            padding-bottom: 50px;
 
 
-        .results {
-            margin-top: 35vh;
+            .results {
+                margin-top: 35vh;
+            }
+        }
+
+        .map-section {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fcf5f3;
+            height: 150vh;
+            padding: 10px 0px;
+
         }
     }
 
-    .map-section {
-        flex: 2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #fcf5f3;
-        height: 100vh;
-        padding: 10px 0px;
-
+    .needRoomate {
+        width: 80%;
+        height: 40vh;
+        background-color: aqua;
+        margin: 40px auto;
     }
+
 }

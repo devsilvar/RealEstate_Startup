@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import './navbar.scss';
+import { FaBarsStaggered } from 'react-icons/fa6';
+import { IoMdClose } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [isNavOpen, setisNavOpen] = useState(false);
   return (
     <nav>
-      <div className='overlay' onClick={() => setisNavOpen(false)}></div>
       <ul className='left'>
         <Link to='/'>
           <span>
@@ -40,17 +41,20 @@ const Navbar = () => {
           </li>
 
           <div className='smallNav'>
-            <img
-              src='./menu.png'
-              Linklt=''
-              style={
-                isNavOpen
-                  ? { position: 'fixed', top: '27px', right: '9.5%' }
-                  : undefined
-              }
-              onClick={() => setisNavOpen((prev) => !prev)}
-            />
+            {isNavOpen == false && (
+              <FaBarsStaggered
+                className='imgIcon'
+                onClick={() => setisNavOpen((prev) => !prev)}
+              />
+            )}
+
             <div className={isNavOpen ? 'menu active' : 'menu'}>
+              {isNavOpen && (
+                <IoMdClose
+                  className='closeIcon'
+                  onClick={() => setisNavOpen((prev) => !prev)}
+                />
+              )}
               <Link to=''>Home</Link>
               <Link to=''>Linkbout</Link>
               <Link to=''>ContLinkct</Link>

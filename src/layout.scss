@@ -8,8 +8,16 @@
   font-family: 'Montserrat', 'Trebuchet MS', 'Lucida Sans Unicode',
     'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-optical-sizing: auto;
+
 }
+
 
 body {
   overflow-x: hidden;
+  // overflow-y: scroll;
+  // scrollbar-width: 4px;
+  // scroll-behavior: smooth;
+  // scrollbar-color: #888;
+  // scrollbar-gutter: #f1f1f1;
+
 }
