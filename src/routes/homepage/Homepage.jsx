@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { customerReview, listData } from '../../api/fakeData';
+import { Link } from 'react-router-dom';
 import sun from '../../assets/sun.svg';
 import './homepage.scss';
 import TestimonySlide from '../../components/testimony/TestimonySlide';
@@ -83,7 +84,9 @@ const Homepage = () => {
                   max={10000000}
                 />
                 <button>
-                  <img src='/search.png' alt='' />
+                  <Link to='/list'>
+                    <img src='/search.png' alt='' />
+                  </Link>
                 </button>
               </div>
             </div>

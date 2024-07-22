@@ -4,11 +4,11 @@ import Footer from '../../components/footer/Footer';
 import Navbar from '../../components/navbar/Navbar';
 import { Outlet } from 'react-router-dom';
 
-const Layout = () => {
+const Layout = ({refs}) => {
   return (
     <section className='layout'>
       <div className='navbar'>
-        <Navbar />
+        <Navbar refs={refs} />
       </div>
       <div className='content'>
         <Outlet />

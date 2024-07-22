@@ -44,10 +44,6 @@ const Footer = () => {
           <div className='icons'></div>
           <div className='copywright'>
             <p>
-              <u> National Transaction Corporation</u> is a Registered MSP/ISO
-              of Elavon, Inc.
-            </p>
-            <p>
               {' '}
               <b> © All right Reversed.Sunlimetech</b>
             </p>

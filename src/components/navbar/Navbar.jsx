@@ -1,12 +1,21 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './navbar.scss';
 import { FaBarsStaggered } from 'react-icons/fa6';
 import { IoMdClose } from 'react-icons/io';
 import { Link } from 'react-router-dom';
-const Navbar = () => {
+import { userData } from '../../api/fakeData';
+const Navbar = ({ refs }) => {
   const [isNavOpen, setisNavOpen] = useState(false);
+  const [isActive, setisActive] = useState(false);
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      window.scrollY > 30 ? setisActive(true) : setisActive(false);
+    });
+  });
+  const user = true;
+
   return (
-    <nav>
+    <nav ref={refs} className={isActive && 'active'}>
       <ul className='left'>
         <Link to='/'>
           <span>
@@ -29,17 +38,27 @@ const Navbar = () => {
       </ul>
       <div className='right-section'>
         <ul className='right'>
-          <li>
-            <Link to='/signin'>Sign in</Link>
-          </li>
-          <li>
-            {' '}
-            <button>
-              {' '}
-              <Link to='/signout'>Sign up</Link>
-            </button>{' '}
-          </li>
-
+          {user ? (
+            <div className='user'>
+              <img src={userData.img} alt='' />
+              <span>{userData.name}</span>
+              <Link to='/profile' className='profile'>
+                <div className='notification'>3</div>
+                <span>Profile</span>
+              </Link>
+            </div>
+          ) : (
+            <>
+              <li>
+                <Link to='/signin'>Sign in</Link>
+              </li>
+              <li>
+                <button>
+                  <Link to='/signout'>Sign up</Link>
+                </button>
+              </li>
+            </>
+          )}
           <div className='smallNav'>
             {isNavOpen == false && (
               <FaBarsStaggered

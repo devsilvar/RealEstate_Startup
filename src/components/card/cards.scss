@@ -48,6 +48,7 @@
             &:hover {
                 color: #000;
                 scale: 1.03;
+                width: max-content;
                 border-bottom: 2px solid orange;
             }
 
@@ -75,11 +76,15 @@
             border-radius: 5px;
             background-color: rgba(255, 205, 81, 0.438);
             width: max-content;
+
+
+
         }
 
         img {
             width: 16px;
             height: 16px;
+
         }
 
         .bottom {
@@ -101,6 +106,14 @@
                     background-color: whitesmoke;
                     padding: 8px;
                     border-radius: 7px;
+
+                    img {
+                        &:hover {
+                            transform: rotate(360deg);
+                            transition: all 0.4s ease-in-out;
+                        }
+
+                    }
 
                     p {
                         text-wrap: nowrap;
